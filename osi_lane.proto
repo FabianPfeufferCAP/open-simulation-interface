@@ -202,7 +202,7 @@ message Lane
         // the centerline of lane l4 (black line) is given by
         // (cl4_1, cl4_2, cl4_3, cl4_4, cl4_5).
         //
-        // \image html OSI_LaneBoundaries_And_CenterLine.svg "Centerline" width=500px
+        // \image html OSI_LaneBoundaries_And_CenterLine_Intersection.svg "LaneBoundaries_Centerline" width=900px
         //
         // \note 
         // cl: center line
@@ -302,7 +302,17 @@ message Lane
         // this lane starts from. The successor lanes start in the same point
         // that this lane ends in.
         //
-        // Example: See image \ref Intersection.
+        // Example: See image \ref LaneBoundaries_Centerline.
+        //
+        // \attention For intersections it's possible that a lane pairing consists
+        // exclusively of antecessors or successors. Such a case appears for the pairing
+        // of lane 2 and lane 3 in image \ref LaneBoundaries_Centerline,
+        // where the two lanes are both paired as antecessors (l2l3,).
+        //
+        // \note The antecessor/successor (w.r.t. driving direction) of a driving lane can be
+        // determined from the \c #centerline_is_driving_direction. In the case of intersections,
+        // the antecessor/successor (w.r.t. driving direction) has to be determined by comparison
+        // with the current/previous lane.
         //
         // \note OSI uses singular instead of plural for repeated field names.
         //
