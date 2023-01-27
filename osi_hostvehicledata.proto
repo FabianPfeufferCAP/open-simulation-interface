@@ -4,6 +4,7 @@ option optimize_for = SPEED;
 
 import "osi_version.proto";
 import "osi_common.proto";
+import "osi_route.proto";
 
 package osi3;
 
@@ -86,6 +87,10 @@ message HostVehicleData
     // \note OSI uses singular instead of plural for repeated field names.
     //
     repeated VehicleAutomatedDrivingFunction vehicle_automated_driving_function = 12;
+
+    // Currently planned route of the vehicle
+    //
+    optional Route route = 13;
 
     //
     // \brief Base parameters and overall states of the vehicle.

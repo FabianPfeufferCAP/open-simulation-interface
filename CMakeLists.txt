@@ -83,6 +83,7 @@ set(OSI_PROTO_FILES
     osi_trafficcommand.proto
     osi_referenceline.proto
     osi_roadmarking.proto
+    osi_route.proto
     osi_lane.proto
     osi_logicallane.proto
     osi_featuredata.proto
